@@ -3,6 +3,7 @@ from flask import Flask
 from flask_migrate import Migrate
 from config import Config
 from models import db
+from routes import bp as routes_bp
 
 migrate = Migrate()
 
@@ -15,7 +16,6 @@ def create_app(config_class=Config):
 
     migrate.init_app(app, db)
     # Registrar rutas (blueprint)
-    from routes import bp as routes_bp
     app.register_blueprint(routes_bp)
 
     return app
