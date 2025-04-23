@@ -1,0 +1,32 @@
+# requests.http
+
+###
+# Listar todos los libros
+GET http://127.0.0.1:5000/libros
+
+###
+# Obtener un libro específico (reemplaza <id> con un ID válido)
+GET http://127.0.0.1:5000/libros/1
+
+###
+# Crear un nuevo libro
+POST http://127.0.0.1:5000/libros
+Content-Type: application/json
+
+{
+  "titulo": "Viaje al centro de la tierra",
+  "autor": "Julio Verne"
+}
+
+###
+# Actualizar un libro (reemplaza <id> con un ID válido)
+PUT http://127.0.0.1:5000/libros/3
+Content-Type: application/json
+
+{
+  "titulo": "Viaje al centro de la tierra (Edición ama de casa)"
+}
+
+###
+# Eliminar un libro (reemplaza <id> con un ID válido)
+DELETE http://127.0.0.1:5000/libros/4
