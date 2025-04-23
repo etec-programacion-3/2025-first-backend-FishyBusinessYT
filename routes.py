@@ -38,6 +38,8 @@ def crear_libro():
 
     db.session.add(nuevo_libro)  # Agrega el nuevo libro a la sesión de la base de datos
     db.session.commit()  # Guarda los cambios en la base de datos
+    db.session.refresh(nuevo_libro)
+    
     resultado = nuevo_libro.__dict__
     resultado.pop('_sa_instance_state', None)
     return jsonify(resultado), 201  # Devuelve el nuevo libro y código 201 (creado)
@@ -56,6 +58,8 @@ def actualizar_libro(id):
     libro.autor = data.get('autor', libro.autor)
 
     db.session.commit()
+    db.session.refresh(libro)
+
     resultado = libro.__dict__
     resultado.pop('_sa_instance_state', None)
     return jsonify(resultado)

@@ -20,7 +20,7 @@ Content-Type: application/json
 
 ###
 # Actualizar un libro (reemplaza <id> con un ID válido)
-PUT http://127.0.0.1:5000/libros/3
+PUT http://127.0.0.1:5000/libros/4
 Content-Type: application/json
 
 {
