@@ -14,6 +14,7 @@
    ```
 2) Crear entorno virtual e instalar dependencias:
    ```
+   cd .2025-first-backend-FishyBusinessYT
    python -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
