@@ -1,4 +1,4 @@
-./venv
-./migrations
-./biblioteca.db
-./__pycache__
+.venv
+migrations
+__pycache__
+biblioteca.db
