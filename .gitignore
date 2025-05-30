@@ -1,2 +1,4 @@
 ./venv
 ./migrations
+./biblioteca.db
+./__pycache__
