@@ -18,7 +18,11 @@
    source venv/bin/activate
    pip install -r requirements.txt
    ```
-3) Correr app.py con Python:
+3) Inicializar base de datos:
+   ```
+   python init_db.py
+   ```
+4) Correr app.py con Python:
    ```
    python app.py
    ```
