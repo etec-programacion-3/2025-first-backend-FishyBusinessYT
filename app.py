@@ -4,11 +4,13 @@ from flask_migrate import Migrate
 from config import Config
 from models import db
 from routes import bp as routes_bp
+from flask_cors import CORS
 
 migrate = Migrate()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
+    CORS(app)
     app.config.from_object(config_class)
 
     # Inicializar SQLAlchemy
